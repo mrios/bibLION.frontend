@@ -1,0 +1,58 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">bibLION</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Prestamos</a></li>
+      <li><a href="#">Libros</a></li>
+      <li><a href="#">Socios</a></li>
+      <li><a href="#">Administración</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Mi cuenta</a></li>
+      <li><a href="#">Salir</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+<div id="container" class="row">
+	<div>
+		<ol class="breadcrumb">
+		  <li><a href="#">bibLION</a></li>
+		  <li id="currentSection" class="active"></li>
+		</ol>
+	</div>
+	<div class="row">
+		<div class="col-md-10 main-panel">
+
+		</div>
+		<div class="col-md-2 side-panel">
+			<div class="list-group menu">
+				{{#options}}
+					<a class="list-group-item navegable" data-route="{{key}}">
+						{{name}}
+					</a>
+					{{#if suboptions}}
+						<div class="submenu" data-parent="{{key}}">
+						{{#suboptions}}
+							<a class="list-group-item navegable" data-route="{{key}}">
+								{{name}}
+							</a>
+						{{/suboptions}}
+						</div>
+					{{/if}}
+				{{/options}}
+			</div>
+		</div>
+	</div>
+</div>
+	

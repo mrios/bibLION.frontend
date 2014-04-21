@@ -1,0 +1,6 @@
+[submodule "sigma"]
+	path = sigma
+	url = git@github.com:SIGMA-IT/SGM_Plugins.git
+[submodule "steal"]
+	path = steal
+	url = https://github.com/bitovi/steal.git

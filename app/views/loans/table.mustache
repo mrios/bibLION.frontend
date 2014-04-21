@@ -1,0 +1,48 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>
+				#
+			</th>
+			<th class="sorteable" to-sort="name">
+				Socio
+			</th>
+			<th class="sorteable" to-sort="lastName">
+				Libro
+			</th>
+			<th class="sorteable" to-sort="age">
+				Fecha devolucion (pactada)
+			</th>
+			<th class="sorteable" to-sort="age">
+				Fecha devolucion (real)
+			</th>
+			<th>
+				Acciones
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#items}}
+		<tr>
+			<td>
+				{{id}}
+			</td>
+			<td>
+				{{socio}}
+			</td>
+			<td>
+				{{libro}}
+			</td>
+			<td>
+				{{fecha_devolucion_pactada}}
+			</td>
+			<td>
+				{{fecha_devolucion_real}}
+			</td>
+			<td>
+				<button class="btn btn-primary btn-sm">Devolver</button>
+			</td>
+		</tr>
+		{{/items}}
+	</tbody>
+</table>

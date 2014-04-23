@@ -1,0 +1,24 @@
+{{#items}}
+	<div class="row" {{ data 'value'}}>    
+	    <div>
+	        <span class="title"><a href="#">{{book.title}}</a></span>de
+	        <span class="label label-inverse">
+	            {{member.name}}&nbsp;{{member.lastName}}
+	        </span>
+	    </div>
+	    <div class="span8 description-trunked">
+	        <ul>
+	        	<li>
+	        </ul>
+	    </div>
+	    <div class="btn-group pull-right">
+	        <a href='#' class="btn btn-small btn-detail">
+	        	<i class="fa fa-edit fa-lg"></i>
+	        </a>
+	        <button class="btn btn-small btn-primary" data-toggle="modal" data-target="#modal-diagram">
+	        	<i class="fa fa-ok fa-lg"></i> Devolver
+	        </button>
+	    </div>
+	</div>
+	<hr class="min">
+{{/items}}

@@ -1,7 +1,7 @@
 steal(
 	'app/lib.js'
-,	'app/controls/main'
-,	'app/css/main.css'
+,	'app/common/controls/main'
+,	'app/common/css/main.css'
 // ,	'app/css/bootstrap.min.css'
 // ,	'app/css/dashboard.css'
 ).then(
@@ -10,7 +10,7 @@ steal(
 		new	Bib.Main(
 			can.$('body')
 		,	{
-				view: 'app/views/main/init.mustache'
+				view: 'app/common/views/main/init.mustache'
 			,	data:	
 				{
 					options:

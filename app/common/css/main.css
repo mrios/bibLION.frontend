@@ -7,3 +7,19 @@ body{
 #container.row{
 	margin: 0 10px;
 }
+
+table .row p.span8{
+    margin-left: 0px;
+}
+
+table .row p span.title{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+table .row p span.label{
+    font-size: 14px;
+    font-weight: normal;
+    padding: 2px 5px;
+    margin-left: 5px;
+}

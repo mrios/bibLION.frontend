@@ -1,24 +1,79 @@
-{{#items}}
-	<div class="row" {{ data 'value'}}>    
-	    <div>
-	        <span class="title"><a href="#">{{book.title}}</a></span>de
-	        <span class="label label-inverse">
-	            {{member.name}}&nbsp;{{member.lastName}}
-	        </span>
-	    </div>
-	    <div class="span8 description-trunked">
-	        <ul>
-	        	<li>
-	        </ul>
-	    </div>
-	    <div class="btn-group pull-right">
-	        <a href='#' class="btn btn-small btn-detail">
-	        	<i class="fa fa-edit fa-lg"></i>
-	        </a>
-	        <button class="btn btn-small btn-primary" data-toggle="modal" data-target="#modal-diagram">
-	        	<i class="fa fa-ok fa-lg"></i> Devolver
-	        </button>
-	    </div>
-	</div>
-	<hr class="min">
-{{/items}}
+<br>
+<table class="table table-bordered">
+	<tbody>
+		{{#items}}
+		<tr {{ data 'value'}}>
+			<td>    
+	        	<div class="well well-sm">
+	        		<h4>
+			        	&nbsp;&nbsp;<i class="fa fa-book"></i>
+			        	<a href="#">{{book.title}}</a>&nbsp; de &nbsp;
+				        <small>
+				        <label>Autores </label>
+				            {{#book.authors}}
+				            	{{member.lastName}} / 
+				        	{{/book.authors}}
+				        </small>
+				    </h4>
+				    <p class="bg-info">
+	        		
+		    			<label>Prestado a: </label>
+			        		{{member.lastName}}, {{member.name}}
+			       		&nbsp;&nbsp;
+				        <label>Teléfono: </label>
+				        	{{member.telephone}}
+			       		&nbsp;&nbsp;
+			        	<label>Dirección: </label>
+			        	{{member.address}}
+
+						<span class="btn-group-sm pull-right">
+					        <a href='#' class="btn btn-sm btn-detail">
+					        	<i class="fa fa-edit fa-lg"></i>
+					        </a>
+					        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-diagram">
+					        	<i class="fa fa-ok fa-lg"></i> Devolver
+					        </button>
+					    </span>
+	        	</p>
+				</div>
+			</td>
+		</tr>
+		<tr {{ data 'value'}}>
+			<td>    
+	        	<div class="well well-sm">
+	        		<h4>
+			        	&nbsp;&nbsp;<i class="fa fa-book"></i>
+			        	<a href="#">{{book.title}}</a>&nbsp; de &nbsp;
+				        <small>
+				        <label>Autores </label>
+				            {{#book.authors}}
+				            	{{member.lastName}} / 
+				        	{{/book.authors}}
+				        </small>
+				    </h4>
+				    <p class="bg-info">
+	        		
+		    			<label>Prestado a: </label>
+			        		{{member.lastName}}, {{member.name}}
+			       		&nbsp;&nbsp;
+				        <label>Teléfono: </label>
+				        	{{member.telephone}}
+			       		&nbsp;&nbsp;
+			        	<label>Dirección: </label>
+			        	{{member.address}}
+
+						<span class="btn-group-sm pull-right">
+					        <a href='#' class="btn btn-sm btn-detail">
+					        	<i class="fa fa-edit fa-lg"></i>
+					        </a>
+					        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-diagram">
+					        	<i class="fa fa-ok fa-lg"></i> Devolver
+					        </button>
+					    </span>
+	        	</p>
+				</div>
+			</td>
+		</tr>
+		{{/items}}
+	</tbody>
+</table>

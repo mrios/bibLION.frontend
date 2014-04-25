@@ -1,5 +1,6 @@
 steal(
 	'sigma/controls/abm'
+,	'app/loans/controls/wizard.js'
 ,	'app/common/models/Loan.js'
 ).then(
 	function()
@@ -71,7 +72,16 @@ steal(
 				}
 			}
 		,	{
-				quickSearch: function(query)
+				_render_new: function($element)
+				{
+					this.newForm
+					=	new	Bib.Wizard_Loan(
+							$element.parents('#new')
+						,	{	}
+						)
+				}
+
+			,	quickSearch: function(query)
 				{
 					return	_.isEmpty(query.value)
 							?	{}

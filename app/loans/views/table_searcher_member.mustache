@@ -1,0 +1,44 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>
+				#
+			</th>
+			<th class="sorteable" to-sort="name">
+				Nombre
+			</th>
+			<th class="sorteable" to-sort="lastName">
+				Apellido
+			</th>
+			<th class="sorteable" to-sort="numberMember">
+				# Socio
+			</th>
+			<th>
+				Editar
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#items}}
+		<tr {{data 'value'}}>
+			<td>
+				{{id}}
+			</td>
+			<td>
+				{{name}}
+			</td>
+			<td>
+				{{lastName}}
+			</td>
+			<td>
+				{{numberMember}}
+			</td>
+			<td class="action text-center">
+				<span class="btn btn-primary btn-sm">
+					<i class="fa fa-plus"></i>
+				</span>
+			</td>
+		</tr>
+		{{/items}}
+	</tbody>
+</table>

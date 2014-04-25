@@ -8,7 +8,9 @@ steal(
 		Sigma.Model(
 			'Loan'
 		,	{
-				filter: function(queries)
+				url:	'/localhost:8080/loans'
+
+			,	filter: function(queries)
 				{
 					return	can.ajax(
 								{

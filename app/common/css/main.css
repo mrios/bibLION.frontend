@@ -23,3 +23,8 @@ table .row p span.label{
     padding: 2px 5px;
     margin-left: 5px;
 }
+
+.tabs-left > .nav-tabs {
+    margin-top: 41px;
+    margin-right: -1px !important;
+}

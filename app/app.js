@@ -2,6 +2,7 @@ steal(
 	'app/lib.js'
 ,	'app/common/controls/main'
 ,	'app/common/css/main.css'
+,	'sigma/styles/tabs.css'
 // ,	'app/css/bootstrap.min.css'
 // ,	'app/css/dashboard.css'
 ).then(

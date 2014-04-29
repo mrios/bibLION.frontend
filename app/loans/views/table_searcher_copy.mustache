@@ -1,0 +1,38 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>
+				#
+			</th>
+			<th class="sorteable" to-sort="editorial">
+				Año de edición
+			</th>
+			<th class="sorteable" to-sort="pais">
+				Valor nominal
+			</th>
+			<th>
+				Seleccionar
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#items}}
+		<tr {{ data 'value'}}>
+			<td>
+				{{id}}
+			</td>
+			<td>
+				{{yearEdition}}
+			</td>
+			<td>
+				{{nominalValue}}
+			</td>
+			<td class="action text-center">
+				<span class="btn btn-primary btn-sm">
+					<i class="fa fa-plus"></i>
+				</span>
+			</td>
+		</tr>
+		{{/items}}
+	</tbody>
+</table>

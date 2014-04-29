@@ -20,7 +20,7 @@ steal(
 					=	new	Sigma.Table(
 							element
 						,	{
-								data:		Member.filter
+								data:		Bib.Member.filter
 							,	view:		this.options.view_table
 							,	paginable:	true
 							,	queries:

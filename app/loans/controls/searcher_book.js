@@ -22,7 +22,7 @@ steal(
 					=	new	Sigma.Table(
 							element
 						,	{
-								data:		Book.filter
+								data:		Bib.Book.filter
 							,	view:		this.options.view_table
 							,	paginable:	true
 							,	queries:
@@ -102,7 +102,7 @@ steal(
 							this.element
 						,	'next.sigma.wizard'
 						,	{
-								step: 'finish'
+								step: 'searcher_copy'
 							,	data: this.options.default_data.attr('book_data',this.book_data)
 							}
 						)

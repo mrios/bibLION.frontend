@@ -1,6 +1,7 @@
 steal(
 	'sigma/controls/abm'
 ,	'app/common/models/Book.js'
+,	'app/common/models/Editorial.js'
 ).then(
 	function()
 	{
@@ -38,7 +39,7 @@ steal(
 					,	searcheable:'nombre'
 					,	sorteable:  true
 					}
-				,	model: Book
+				,	model: Bib.Book
 				,	form_data:
 					[
 						{
@@ -65,11 +66,8 @@ steal(
 						,	name:	'editorialId'
 						,	label:	'Editorial'
 						,	required: true
-						, 	options:
-							{
-								url:'//localhost:8080/api/editorials'
-							,	type:'POST'
-							}
+						, 	options: Bib.Editorial.findAll()
+							
 						}
 					,	{
 							type:	'select'
@@ -98,30 +96,7 @@ steal(
 		,	{
 				quickSearch: function(query)
 				{
-					return	_.isEmpty(query.value)
-							?	{}
-							:	{
-									operator: 'or'
-								,	filters:
-									_.union(
-										[
-											{
-												field: 'nombre'
-											,	value: query.value.toUpperCase()
-											,	criteria: '%'
-											}
-										]
-									,	!_.isNaN(parseInt(query.value))
-										?	[
-												{
-													field: 'nroCentro'
-												,	value: query.value
-												,	criteria: '='
-												}
-											]
-										:	[]
-									)
-								}
+					return	{	value: query.value.toUpperCase() }
 				}
 
 			,	submitForm: function(instance,formData)

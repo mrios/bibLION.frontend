@@ -2,6 +2,7 @@ steal(
 	'sigma/controls/wizard'
 ,	'app/loans/controls/searcher_member.js'
 ,	'app/loans/controls/searcher_book.js'
+,	'app/loans/controls/searcher_copy.js'
 ,	'app/loans/controls/finish.js'
 ).then(
 	function()
@@ -24,6 +25,10 @@ steal(
 						,	{
 								label:	'Buscar Libro'
 							,	key:	'searcher_book'
+							}
+						,	{
+								label:	'Buscar Ejemplar'
+							,	key:	'searcher_copy'
 							}
 						,	{
 								label:	'Finalizar'
@@ -51,6 +56,17 @@ steal(
 				{
 					steal.dev.log('Bib.Loan.Search_book')
 					new	Bib.Searcher_book(
+						$element
+					,	{
+							default_data: wizard_data
+						}
+					)
+				}
+
+			,	_render_searcher_copy: function($element,wizard_data)
+				{
+					steal.dev.log('Bib.Loan.Search_copy')
+					new	Bib.Searcher_copy(
 						$element
 					,	{
 							default_data: wizard_data

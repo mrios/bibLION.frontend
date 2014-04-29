@@ -39,7 +39,7 @@ steal(
 					,	searcheable:'nombre'
 					,	sorteable:  true
 					}
-				,	model: Loan
+				,	model: Bib.Loan
 				,	form_data:
 					[
 						{

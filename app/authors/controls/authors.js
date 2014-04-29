@@ -38,7 +38,7 @@ steal(
 					,	searcheable:'nombre'
 					,	sorteable:  true
 					}
-				,	model: Author
+				,	model: Bib.Author
 				,	form_data:
 					[
 						{
@@ -54,9 +54,10 @@ steal(
 						}
 					,	{
 							type: 'button'
-						,	class: 'btn-primary btn-md'
-						,	name: 'save'
+						,	name: 'submit'
+						,	submit: true
 						,	label: 'Guardar'
+						,	kind:'btn-primary'
 						}
 					]
 				,	data:

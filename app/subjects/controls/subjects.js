@@ -38,7 +38,7 @@ steal(
 					,	searcheable:'nombre'
 					,	sorteable:  true
 					}
-				,	model: Subject
+				,	model: Bib.Subject
 				,	form_data:
 					[
 								{

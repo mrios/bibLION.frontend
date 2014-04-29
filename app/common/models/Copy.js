@@ -6,23 +6,23 @@ steal(
 	function()
 	{
 		Sigma.Model(
-			'Bib.Book'
+			'Bib.Copy'
 		,	{
-				url: '//localhost:8080/api/books'
+				url: '//localhost:8080/api/copies'
 				
 			,	filter: function(queries)
 				{
 					return	can.ajax(
 								{
 									method: 'POST'
-								,	url: '//localhost:8080/api/books/filter'
+								,	url: '//localhost:8080/api/copies/filter'
 								,	data: queries
 								}
 							).pipe(
 								function(raw)
 								{
 									return	{
-												items: Bib.Book.models(raw.items)
+												items: Bib.Copy.models(raw.items)
 											,	count: raw.count
 											}
 								}

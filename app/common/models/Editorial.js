@@ -6,21 +6,23 @@ steal(
 	function()
 	{
 		Sigma.Model(
-			'Editorial'
+			'Bib.Editorial'
 		,	{
-				filter: function(queries)
+				url: '//localhost:8080/api/editorials'
+
+			,	filter: function(queries)
 				{
 					return	can.ajax(
 								{
 									method: 'POST'
-								,	url: '//localhost:8080/api/editorials'
+								,	url: '//localhost:8080/api/editorials/filter'
 								,	data: queries
 								}
 							).pipe(
 								function(raw)
 								{
 									return	{
-												items: Editorial.models(raw.items)
+												items: Bib.Editorial.models(raw.items)
 											,	count: raw.count
 											}
 								}

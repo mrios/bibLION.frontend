@@ -70,6 +70,11 @@ steal(
 			return	this.getFullDate() + '/' + this.getFullMonth() + '/' + this.getFullYear()
 		}
 
+		Date.prototype.getYMD = function()
+		{
+			return	this.getFullYear() + '-' + this.getFullMonth() + '-' + this.getFullDate()
+		}
+
 		Date.prototype.getFullMinutes = function () {
 			return	(this.getMinutes() < 10)
 					?	'0'+this.getMinutes()

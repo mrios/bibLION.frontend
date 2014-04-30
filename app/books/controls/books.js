@@ -96,7 +96,7 @@ steal(
 		,	{
 				quickSearch: function(query)
 				{
-					return	{	value: query.value.toUpperCase() }
+					return query.value.toUpperCase()
 				}
 
 			,	submitForm: function(instance,formData)

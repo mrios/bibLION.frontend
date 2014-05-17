@@ -61,7 +61,7 @@ steal(
 					]
 				,	data:
 					{
-						title: 'ABM de Categoryes'
+						title: 'ABM de Categorias'
 					}
 				,	route:
 					{
@@ -73,30 +73,7 @@ steal(
 		,	{
 				quickSearch: function(query)
 				{
-					return	_.isEmpty(query.value)
-							?	{}
-							:	{
-									operator: 'or'
-								,	filters:
-									_.union(
-										[
-											{
-												field: 'nombre'
-											,	value: query.value.toUpperCase()
-											,	criteria: '%'
-											}
-										]
-									,	!_.isNaN(parseInt(query.value))
-										?	[
-												{
-													field: 'nroCentro'
-												,	value: query.value
-												,	criteria: '='
-												}
-											]
-										:	[]
-									)
-								}
+					return	query.value.toUpperCase()
 				}
 
 			,	submitForm: function(instance,formData)

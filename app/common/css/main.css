@@ -28,3 +28,17 @@ table .row p span.label{
     margin-top: 41px;
     margin-right: -1px !important;
 }
+
+.table-loans td {
+    padding:0 !important;
+    border:none !important;
+}
+
+.table-loans td div.well {
+    margin-bottom: 5px !important;
+}
+
+
+.table-loans td div.well p {
+    margin: 0;
+}

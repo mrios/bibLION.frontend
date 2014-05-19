@@ -55,9 +55,9 @@ steal(
 					,	{
 							type: 'button'
 						,	name: 'submit'
-						,	submit: true
 						,	label: 'Guardar'
 						,	kind:'btn-primary'
+						,	submit: true
 						}
 					]
 				,	data:

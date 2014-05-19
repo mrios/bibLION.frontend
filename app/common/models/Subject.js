@@ -8,12 +8,13 @@ steal(
 		Sigma.Model(
 			'Bib.Subject'
 		,	{
-				filter: function(queries)
+				url: 'http://localhost:8080/api/subjects'
+			,	filter: function(queries)
 				{
 					return	can.ajax(
 								{
 									method: 'POST'
-								,	url: '//localhost:8080/api/subjects/filter'
+								,	url: 'http://localhost:8080/api/subjects/filter'
 								,	data: queries
 								}
 							).pipe(

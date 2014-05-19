@@ -52,6 +52,7 @@ steal(
 								,	class: 'btn-primary btn-md'
 								,	name: 'save'
 								,	label: 'Guardar'
+								,	submit: true
 								}
 							]
 				,	data:
@@ -68,46 +69,7 @@ steal(
 		,	{
 				quickSearch: function(query)
 				{
-					return	_.isEmpty(query.value)
-							?	{}
-							:	{
-									operator: 'or'
-								,	filters:
-									_.union(
-										[
-											{
-												field: 'nombre'
-											,	value: query.value.toUpperCase()
-											,	criteria: '%'
-											}
-										]
-									,	!_.isNaN(parseInt(query.value))
-										?	[
-												{
-													field: 'nroCentro'
-												,	value: query.value
-												,	criteria: '='
-												}
-											]
-										:	[]
-									)
-								}
-				}
-
-			,	submitForm: function(instance,formData)
-				{
-					var	toSave
-					=	{
-							idNombreEmpresa: formData.attr('nombreEmpresa.data.id')
-						,	nombre: formData.attr('nombre.value')
-						,	nroCentro: formData.attr('nroCentro.value')
-						,	telefono: formData.attr('telefono.value')
-						,	email: formData.attr('email.value')
-						,	observaciones: formData.attr('observaciones.value')
-						}
-					return	_.isUndefined(instance)
-							?	new Milkrun.Models.CentroCosto(toSave).save()
-							:	instance.attr(toSave).save()
+					return	query.value.toUpperCase()
 				}
 			}
 		)

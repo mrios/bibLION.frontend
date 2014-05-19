@@ -80,6 +80,7 @@ steal(
 						,	class: 'btn-primary btn-md'
 						,	name: 'save'
 						,	label: 'Guardar'
+						,	submit: true
 						}
 					]
 				,	data:

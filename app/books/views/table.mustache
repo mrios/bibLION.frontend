@@ -5,7 +5,10 @@
 				#
 			</th>
 			<th class="sorteable" to-sort="titulo">
-				Titulo
+				Título
+			</th>
+			<th class="sorteable" to-sort="autores">
+				Autores
 			</th>
 			<th class="sorteable" to-sort="isbn">
 				ISBN
@@ -25,7 +28,22 @@
 				{{id}}
 			</td>
 			<td>
-				{{title}}
+				<p>{{title}}</p>
+				<p>
+					{{#subjects}}
+		            <span class="label label-default">{{description}}</span>
+		        	{{/subjects}}
+				</p>
+				<p>
+					{{#categories}}
+		            <span class="label label-info" title="{{description}}">{{name}}</span>
+		        	{{/categories}}
+				</p>
+			</td>
+			<td>
+				{{#authors}}
+	             - {{name}} {{lastName}} 
+	        	{{/authors}}
 			</td>
 			<td>
 				{{isbn}}

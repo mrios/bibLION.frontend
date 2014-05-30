@@ -62,7 +62,7 @@ steal(
 					]
 				,	data:
 					{
-						title: 'ABM de Prestamos'
+						title: 'Listado de Prestamos'
 					}
 				,	route:
 					{

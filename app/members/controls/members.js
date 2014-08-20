@@ -1,6 +1,7 @@
 steal(
 	'sigma/controls/abm'
 ,	'app/common/models/Member.js'
+,	'app/common/models/City.js'
 ).then(
 	function()
 	{
@@ -71,19 +72,9 @@ steal(
 						}
 					,	{
 							type:	'select'
-						,	name:	'cityId'
+						,	name:	'city'
 						,	label:	'Ciudad'
-						,	options:
-						[
-							{
-								label: 'Campana'
-							,	value: 1
-							}
-						,	{
-								label: 'Zárate'
-							,	value: 2
-							}
-						]
+						, 	model:  Bib.City
 						}
 					,	{
 							type:	'text'

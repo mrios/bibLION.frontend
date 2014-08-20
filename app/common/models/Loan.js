@@ -8,7 +8,7 @@ steal(
 		Sigma.Model(
 			'Bib.Loan'
 		,	{
-				url:	'/localhost:8080/api/loans'
+				url:	'//localhost:8080/api/loans'
 
 			,	filter: function(queries)
 				{

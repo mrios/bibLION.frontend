@@ -2,6 +2,7 @@ steal(
 	'sigma/controls/abm'
 ,	'app/common/models/Book.js'
 ,	'app/common/models/Editorial.js'
+,	'app/common/models/Country.js'
 ).then(
 	function()
 	{
@@ -63,17 +64,18 @@ steal(
 						}
 					,	{
 							type:	'select'
-						,	name:	'editorialId'
+						,	name:	'editorial'
 						,	label:	'Editorial'
 						,	required: true
-						, 	options: Bib.Editorial.findAll()
+						, 	model: Bib.Editorial
 							
 						}
 					,	{
 							type:	'select'
-						,	name:	'countryId'
+						,	name:	'country'
 						,	label:	'Pais'
 						,	required: true 
+						, 	model: Bib.Country
 						}
 					,	{
 							type: 'button'

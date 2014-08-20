@@ -6,23 +6,23 @@ steal(
 	function()
 	{
 		Sigma.Model(
-			'Bib.Editorial'
+			'Bib.Country'
 		,	{
-				url: '//localhost:8080/api/editorials'
+				url: '//localhost:8080/api/countries'
 
 			,	filter: function(queries)
 				{
 					return	can.ajax(
 								{
 									method: 'POST'
-								,	url: '//localhost:8080/api/editorials/filter'
+								,	url: '//localhost:8080/api/countries/filter'
 								,	data: queries
 								}
 							).pipe(
 								function(raw)
 								{
 									return	{
-												items: Bib.Editorial.models(raw.items)
+												items: Bib.Country.models(raw.items)
 											,	count: raw.count
 											}
 								}
@@ -31,7 +31,7 @@ steal(
 			}
 		,	{
 				getLabel: function(){
-					return this.attr("name")
+					return this.attr("description")
 				}
 			,	getValue: function(){
 					return this.attr("id")	

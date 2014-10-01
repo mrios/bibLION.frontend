@@ -6,28 +6,43 @@
 			<td>
 				<div class="col-md-9">
 	        		<div class="loan-wrapper">
-			        	&nbsp;<i class="fa fa-book fa-lg"></i>&nbsp;&nbsp;&nbsp;
-			        	<span class="title">
-			        		{{book.title}}
-			        	</span>
-		        		&nbsp;&nbsp;
-			            {{#book.authors}}
-			             - {{name}} {{lastName}} 
-			        	{{/book.authors}}
-				        {{#book.subjects}}
-				        <p>
-					  		{{#book.subjects}}
-				             <span class="label label-default">{{description}}</span>&nbsp;
-				        	{{/book.subjects}}
-						  
-	        				{{#book.categories}}
-				             <span class="label label-info" title="{{description}}">{{name}}</span>&nbsp;
-				        	{{/book.categories}}
+	        			<p class="row col-md-12">
+				        	&nbsp;<i class="fa fa-book fa-lg"></i>&nbsp;&nbsp;&nbsp;
+				        	<span class="title">
+				        		{{copy.book.title}}
+				        	</span>
+				        	{{#copy.book.authors}}
+			        		<span>
+				               &nbsp;&nbsp;de&nbsp;&nbsp;{{name}} {{lastName}} 
+				            </span>
+				        	{{/copy.book.authors}}
 				        </p>
-				        {{/book.subjects}}
+			        	<p class="row col-md-12">
+			        		<span class="col-md-5">
+			        			Año edición: {{copy.yearEdition}}, 
+			        			valor nominal: <span class="badge badge-info">{{copy.nominalValue}}</span>
+			        		</span>
+			        		<span class="col-md-7">
+			        				Ubicacion: piso {{copy.floor}}
+			        			,  pasillo {{copy.corridor}}
+			        			,  armario {{copy.closet}}
+			        			,  estante {{copy.shelf}}
+			        		</span>
+			        	</p>
+			            
+			            <p class="row col-md-12">
+					  		{{#copy.book.subjects}}
+								<span class="label label-default">{{description}}</span>&nbsp;
+				        	{{/copy.book.subjects}}
+				        </p>
+				        
+				        <p class="row col-md-12">
+	        				{{#copy.book.categories}}
+				            	<span class="label label-info" title="{{description}}">{{name}}</span>&nbsp;
+				        	{{/copy.book.categories}}
+				        </p>
 
 					    <hr>
-						
 						<div class="details">
 			    			<label><i class="fa fa-user"></i>&nbsp;</label>
 				        		{{member.lastName}}, {{member.name}}&nbsp;&nbsp;&nbsp;&nbsp;

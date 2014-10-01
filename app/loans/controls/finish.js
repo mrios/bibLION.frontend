@@ -111,7 +111,6 @@ steal(
 					new	Bib.Loan(
 							{
 								memberId: parseInt(data.attr('finish.member_data.value.id'))
-							,	bookId: parseInt(data.attr('finish.book_data.value.id'))
 							,	copyId: parseInt(data.attr('finish.copy_data.value.id'))
 							,	dateLoan: this.LoanForm.getFormData().attr('dateLoan.data').getYMD()
 							,	dateAgreed: this.LoanForm.getFormData().attr('dateReturnAgreed.data')

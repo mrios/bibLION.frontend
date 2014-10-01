@@ -43,7 +43,7 @@ steal(
 					[
 								{
 									type:	'text'
-								,	name:	'name'
+								,	name:	'description'
 								,	label:	'Nombre'
 								,	required: true
 								}

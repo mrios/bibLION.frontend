@@ -12,36 +12,49 @@ steal(
 				}
 			}
 		
-		// can.ajaxPrefilter(
-		// 	function(options,originalOptions,jqXHR)
-		// 	{
-		// 		if	(!can.fixture || !can.fixture.on)
-		// 		{
-		// 			options.url
-		// 			=	// si estoy en el server dejamos
-		// 			(_.last(options.url.split('.')) != 'mustache')
-		// 				// TEST (PC - Adrian)
-		// 				//?	'http://localhost:8080'+originalOptions.url
-		// 				?	'http://172.16.4.75:8080'+originalOptions.url
-		// 					// SERVER
-		// 				//?	'http://192.168.0.12:8080'+originalOptions.url
-		// 				:	originalOptions.url
+		can.ajaxPrefilter(
+			function(options,originalOptions,jqXHR)
+			{
+				console.log(options)
+				// if	(!can.fixture || !can.fixture.on)
+				// {
+				// 	options.url
+				// 	=	// si estoy en el server dejamos
+				// 	(_.last(options.url.split('.')) != 'mustache')
+				// 		// TEST (PC - Adrian)
+				// 		//?	'http://localhost:8080'+originalOptions.url
+				// 		?	'http://172.16.4.75:8080'+originalOptions.url
+				// 			// SERVER
+				// 		//?	'http://192.168.0.12:8080'+originalOptions.url
+				// 		:	originalOptions.url
 
-		// 			if	(options.data && !(options.data instanceof FormData))
-		// 			{
-		// 				options.data
-		// 				=	JSON
-		// 						.stringify(
-		// 							originalOptions.data
-		// 						)
-		// 			}
-		// 		}
-		// 	}
-		// )
+				// 	if	(options.data && !(options.data instanceof FormData))
+				// 	{
+				// 		options.data
+				// 		=	JSON
+				// 				.stringify(
+				// 					originalOptions.data
+				// 				)
+				// 	}
+				// }
+
+				if (originalOptions.type === 'PUT' || options.type === 'PUT') {
+					
+					options.contentType
+					= 	'application/json'
+					
+					options.data
+					=	JSON
+							.stringify(
+								originalOptions.data
+							)
+				}
+			}
+		)
 
 		// can.ajaxSetup(
 		// 	{
-		// 		contentType: 'application/json'	
+		// 		contentType: 'application/json'
 		// 	}
 		// )
 

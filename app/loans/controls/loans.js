@@ -121,7 +121,7 @@ steal(
 						,	observaciones: formData.attr('observaciones.value')
 						}
 					return	_.isUndefined(instance)
-							?	new Milkrun.Models.CentroCosto(toSave).save()
+							?	new Bib.Models.Loan(toSave).save()
 							:	instance.attr(toSave).save()
 				}
 			}

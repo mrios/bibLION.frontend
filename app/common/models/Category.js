@@ -8,7 +8,8 @@ steal(
 		Sigma.Model(
 			'Bib.Category'
 		,	{
-				filter: function(queries)
+				url: 'http://localhost:8080/api/categories'
+			,	filter: function(queries)
 				{
 					return	can.ajax(
 								{

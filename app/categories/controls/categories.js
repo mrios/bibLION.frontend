@@ -81,15 +81,11 @@ steal(
 				{
 					var	toSave
 					=	{
-							idNombreEmpresa: formData.attr('nombreEmpresa.data.id')
-						,	nombre: formData.attr('nombre.value')
-						,	nroCentro: formData.attr('nroCentro.value')
-						,	telefono: formData.attr('telefono.value')
-						,	email: formData.attr('email.value')
-						,	observaciones: formData.attr('observaciones.value')
+							name: formData.attr('name.value')
+						,	description: formData.attr('description.value')
 						}
 					return	_.isUndefined(instance)
-							?	new Milkrun.Models.CentroCosto(toSave).save()
+							?	new Bib.Models.Category(toSave).save()
 							:	instance.attr(toSave).save()
 				}
 			}
